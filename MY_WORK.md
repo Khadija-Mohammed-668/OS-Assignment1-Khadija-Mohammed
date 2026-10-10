@@ -252,7 +252,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[This Assignment helped me visualize how  multithreadeing happens in real time, I also learned the implementation of the Runnable interface and how to create threads for each process  using Thread.start(), I also understood how Thread.join()pauses the Scheduler loop and wait for a process to finish its time quantum before moving to the next one, I saw Thread.sleep() being used to simulate real CPU burst execution, what surprised me the most was that I had to create a brand new Thread instance every time a process needed to re-enter the ready queue. ]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -260,7 +260,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I think the most challenging part of the assignment was dealing with the development environment setup on VScode, as the first time I forked the repository, the code did not run at all and debugger kept throwing a (java.util.concurrent.TimeoutExeption), and I had to keep working on  figuring out what was wrong,the code itself seemed fine so I couldn't understand the problem, other than that the output seemed to come in gibberish instead of the lines in the code.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -268,7 +268,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I had to look at the whole README again and again to find what I can do about the exeption, asked my friends and search for a solution, finally I decided to ask AI and it gave me the solution of using the terminal to manually compile the program and run it, and for the output coming out in weird characters I had to change the language of my device and activate the beta setting.]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -276,19 +276,19 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading is used in modern day in alot of applications and softwares, for example : a web browser uses multithreading in managing tabs,so if a website crashes others remain up and responsive, or in a music player app , multithreading keeps music running while the user interface is still responsive, and the scheduling simulation we worked on shows how an OS manages CPU time between multiple open apps.]
 
 ### Optional: What would you like to learn more about?
 
-[Any topics related to threading or operating systems that you're curious about?]
+[I would like to practice creating threads from scratch to confirm my understanding ]
 
 ### Optional: How confident do you feel about multithreading concepts now?
 
-[Beginner / Intermediate / Confident. What do you understand well? What needs more practice?]
+[ Intermediate, I can use some more practice to fully anderstand the structure of the code ]
 
 ### Optional: Feedback on the assignment
 
-[Any comments? Was it helpful? Too easy or hard? Suggestions?]
+[very helpful assignment to under stand and visualize how multithreading works ,but can be more begginer friendly]
 
 ---
 
@@ -308,7 +308,7 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A process is an independent program with its own memory space, while a thread is a lighter unit and is a part of a process and shares memory with other threads within the process,and as a result to using threads, the communication is faster and creation overhead is lower,and it is why we used threads to simulate the CPU scheduler. In the code the process class is a simulated process that defines the burst time and time quantum, while the real Java Thread is created using the new Thread(process) line inside  addProcessToQueue() to actually execute the run() method .when a thread finishes its time quantum, a context switch occurs, and it is placed back into the ready queue until it completes its execution  .]
 
 ## Question 2: Ready Queue Behavior
 
@@ -320,15 +320,25 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[In a Round-Robin scheduling algorithm, when a process does not finish execution within the given time quantum, a context switch occurs and the process is turned back to the end of the ready queue,the thread is re queued instead of terminated because it has remaining execution time to complete its task, in the code this is handeled by checking the remainingTime and calling  addProcessToQueue(), re queuing matters for fairness and it garentees every process had  and equal share of CPU time.]
 
-Example from my output:
+Example from my output: P7 is requeued twice and enters CPU 3 times until it finishes execution
+
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[▶ P7 executing quantum [2000ms] 
+  ⚡ Quantum progress: [███████████████] 100%
+  ⏸ P7 completed quantum 2000ms │ Overall progress: [████████░░░░░░░░░░░░] 41%
+     Remaining time: 2800ms
+  ↻ P7 yields CPU for context switch
+
+  ➕ P7(Priority:10) added to ready queue │ Burst time: 4800ms
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P9 → P10 → P11 → P12 → P1 → P2 → P3 → P5 → P7]
+└───────────────────────────────────────────────────────────────────────────────]
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+[the snippet shows P7 being requeued after its first time quantum expired, as it needs more CPU time to finish execution]
 
 ## Question 3: Thread Lifecycle
 
@@ -338,15 +348,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [P1 enters the New state when the Thread object is instantiated with new Thread(process) inside the addProcessToQueue() method ,before execution begins]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [P1 enters the Runnable state when currentThread.start() is called in the main scheduler loop, meaning its ready and waiting for the CPU to allocate time to it]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [P1 is Running when its selected by the scheduler and it activly executes the code inside the run() method to simulate its burst time ]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [P1 is waiting when it calls Thread.sleep() inside the run() method to simulate execution, while the main thread separetely enters a waiting state when it calls currentThread.join()]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 is Terminated when its run() method finishes executing (completing quantum of via rnToCompletion()) causing the main thread's join()to stop waiting]
 
 ## Question 4: Real-World Applications
 
@@ -356,32 +366,32 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): [General Purpose CPU Scheduler]
 
 **Description**:
-[Describe the real-world scenario.]
+[A general purpose  OS like Linux or Windows , running multiple apps simultaneously, like a music player and a background antivirus scan, here, each running app acts as a process and the OS assigns the time quantum to limit CPU access,and a context switch occurs when the OS saves the state of an app to run another ]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round-Robin is crucial for fairness and responsiveness, ensuring heavy background tasks do not freeze other tasks, by giving every app a turn on the CPU, so the system remains interactive and immediately responsive , it also provides predictability, garenteeing every program gets a regular slice of processing time  ]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Web Server Request Handeling]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[A web server that handles thousands of simulatanous requests form different clients, in this system each user request acts as a process, and the server allocates a small time quantum to process data for each request]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round-Robin is ideal for fairness and preventing starvation, as it ensures that no request blocks the entire server, for example, if a user requests a massive file the server performs a context switch to prevent slowdowns, this garentees every user has fast and predictable initial response time.]
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.I understood how the Round-Robin mechanism is crucial for fairness and responsiveness
+2.I understood how context switches occur and how they're implemented
+3.I learned how a static counter can track global metrics like context switch
 
 **Concepts I need to study more:**
-1.
-2.
+1.I need to look more into the difference between the simulated Process class and the actual Java Thread that executes it
+2.I would like to know how other scheduling mechanisms work in real time 
 
 ---
 
@@ -390,29 +400,29 @@ Example from my output:
 > ⚠️ **WARNING:** Go through every line. Late submission costs **-1 mark per day**, and the deadline is **October 10, 2026**.
 
 **Repository**
-- [ ] Repository is **PUBLIC** (Settings → Danger Zone → Visibility)
-- [ ] Repository is renamed to `OS-Assignment1-YourFirstName-YourLastName`
-- [ ] GitHub account uses the university email (`@std.psau.edu.sa`)
+- [✓] Repository is **PUBLIC** (Settings → Danger Zone → Visibility)
+- [✓] Repository is renamed to `OS-Assignment1-YourFirstName-YourLastName`
+- [✓] GitHub account uses the university email (`@std.psau.edu.sa`)
 
 **Code**
-- [ ] Student ID is set in `SchedulerSimulation.java` (line 150)
-- [ ] Code compiles and runs with no errors
-- [ ] Feature 1 (priority), Feature 2 (context switches) and Feature 3 (waiting time table) all work
-- [ ] Each feature has clear comments
+- [✓] Student ID is set in `SchedulerSimulation.java` (line 150)
+- [✓] Code compiles and runs with no errors
+- [✓] Feature 1 (priority), Feature 2 (context switches) and Feature 3 (waiting time table) all work
+- [✓] Each feature has clear comments
 
 **Commits**
-- [ ] **At least 3 meaningful commits, ideally 6 or more**
-- [ ] **One commit per feature**
-- [ ] Commits are spread over **different dates** (not all in the last hour)
-- [ ] Everything is **pushed** to GitHub
+- [✓] **At least 3 meaningful commits, ideally 6 or more**
+- [✓] **One commit per feature**
+- [✓] Commits are spread over **different dates** (not all in the last hour)
+- [✓] Everything is **pushed** to GitHub
 
 **This file (`MY_WORK.md`)**
-- [ ] Full name and student ID filled in at the top
+- [✓] Full name and student ID filled in at the top
 - [ ] Development log has **5+ entries** on different dates
-- [ ] Reflection: 4 questions, 5-7 sentences each
-- [ ] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
-- [ ] No `[...]` placeholders left
-- [ ] No section headers deleted
+- [✓] Reflection: 4 questions, 5-7 sentences each
+- [✓] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
+- [] No `[...]` placeholders left
+- [✓] No section headers deleted
 
 **Video**
 - [ ] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`

@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Khadija Abdelhai Mohammed] |
+| **Student ID** | [446052668] |
+| **University Email** | [446052668]@std.psau.edu.sa |
+| **GitHub Username** | [Khadija-Mohammed-668] |
+| **Repository Link** | [https://github.com/Khadija-Mohammed-668/OS-Assignment1-Khadija-Mohammed] |
  
 ---
 
@@ -129,55 +129,70 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 7,2026, 3:00 PM]
+**What I did**:Forked  the repository into VS code and changed line 150 into my student ID
 
 **Details**:
+-Created my GitHub account with uni  email
+-Forked the starting ripository and renamed it 
+-Changed line 150 to my student Id
 
-**Challenges**:
 
-**Solution**:
+**Challenges**:VS code did not  recognize JDK nor git and couldn't sync to my GitHub account
 
-**Time spent**:
+**Solution**:Reinstalled JDK and git, changed .java file into src folder
+
+**Time spent**:1 hour
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 8, 2026, 4:30 PM]
+**What I did**:Reinstalled JDK and git, installed other extentions,commited my student ID
 
 **Details**:
+-Reinstalled JDK and git to fix the recognition problem 
+-Installed needed extentions 
+-Commited the changes I made yesterday
 
-**Challenges**:
+**Challenges**:Finding the right extentions to install
 
-**Solution**:
+**Solution**:Asking friends
 
-**Time spent**:
+**Time spent**:3 hours
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 9, 2026, 11:00 AM, 10 PM]
+**What I did**: Added Feature 1 and commited it ,Added Feature 2 and commited it
 
 **Details**:
+-read the requirements of the features
+-searched implementation techniques to add process priority and context switch counter
+-implemented code
+-commited changes
 
-**Challenges**:
+**Challenges**:Searching and understanding how to implement code
 
-**Solution**:
+**Solution**:Using AI ,asking friends
 
-**Time spent**:
+**Time spent**:4 hours
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 10,2026, 8:00 AM , 4:30 PM]
+**What I did**:Added Feature 3 and commited it , worked on the entrys 
 
 **Details**:
+-Added the entrys of the previous days 
+-Read the requirements of Feature 3
+-Searched implementation techniques to make a time tracking table 
+-Commited changes 
 
-**Challenges**:
+**Challenges**: The code for the table is hard to understand and implenent
 
-**Solution**:
+**Solution**:Used AI and Asked friends
 
-**Time spent**:
+**Time spent**: 4 hours 
 
 ---
 

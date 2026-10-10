@@ -39,7 +39,7 @@
 
 ## 🎥 Video Link
 
-**Video Link**: [Paste your video link here]
+**Video Link**: [(https://youtu.be/Fl9oFO8-ilc?si=Fi8JfqSqh5_-1sTK)]
 
 > ⚠️ **WARNING:** The video must be **publicly accessible** ("Anyone with the link can view") on **Google Drive**, **YouTube (Unlisted or Public)** or any other cloud file-sharing system. A private, restricted or broken link counts as a **missing video (-1 mark)**.
 >
@@ -196,29 +196,33 @@
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 10, 2026, 6:00 PM]
+**What I did**:Answered the questions at MY_WORK.md
 
 **Details**:
+Answered all the questions in the file
 
-**Challenges**:
+**Challenges**: Understandin questions
 
-**Solution**:
+**Solution**: Reread the questions
 
-**Time spent**:
+**Time spent**:3 and 1/2 hours 
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
-**What I did**:
+### Entry 6 - [October 11, 2026, 12:00 AM]
+**What I did**: Added the video link to the file and commited the last changes
 
 **Details**:
+-Filmed and edited the video
+-Pasted the link to the file 
+-Made some final changes and commited them
 
-**Challenges**:
+**Challenges**:Editing the video took so much time
 
-**Solution**:
+**Solution**:Asked friends for help
 
-**Time spent**:
+**Time spent**: 2 and 1/2 hours
 
 ---
 
@@ -226,13 +230,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [18 hours]
 
-**Most challenging part**:
+**Most challenging part**: Implementing features in the SchedulerSimulation file
 
-**Most interesting learning**:
+**Most interesting learning**:How I can use Java to implement Scheduling algorithms and visualize them
 
-**What I would do differently next time**:
+**What I would do differently next time**: Start working on the assignment earlier
 
 ---
 
@@ -418,18 +422,18 @@ Example from my output: P7 is requeued twice and enters CPU 3 times until it fin
 
 **This file (`MY_WORK.md`)**
 - [✓] Full name and student ID filled in at the top
-- [ ] Development log has **5+ entries** on different dates
+- [✓] Development log has **5+ entries** on different dates
 - [✓] Reflection: 4 questions, 5-7 sentences each
 - [✓] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
-- [] No `[...]` placeholders left
+- [✓] No `[...]` placeholders left
 - [✓] No section headers deleted
 
 **Video**
-- [ ] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
-- [ ] Shows your name, ID, repository, 3 features, IDE execution, one threading concept, and commit history
-- [ ] Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
+- [✓] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
+- [✓] Shows your name, ID, repository, 3 features, IDE execution, one threading concept, and commit history
+- [✓] Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
 
 **Blackboard**
-- [ ] Submit **only** the link to your public GitHub repository
+- [✓] Submit **only** the link to your public GitHub repository
 
 > 🎯 **Good luck!** Start early, commit regularly, and make sure you can explain every line you submit.
